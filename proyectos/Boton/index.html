@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CONTROL DE LUZ A TRAVES DE INTERNET</title>
+  <link rel="stylesheet" href="colores.css">
+  <script type="text/javascript">
+    // Connect to the socket. Same URL, port 81.
+    var Socket = new WebSocket('ws://' + window.location.hostname + ':81');
+    //Recibe datos
+    Socket.onmessage = function (evt) {
+
+    };
+
+    //Enviar datos
+    var lastSend = 0;
+    function enviarDatos() {
+      dato = 0;
+      c = document.getElementById('check');
+      if (c.checked == true) {
+        dato = 1;
+        document.getElementById("foco").innerHTML = "<b>ENCENDIDO</b>";
+      } else {
+        dato = 0;
+        document.getElementById("foco").innerHTML = "APAGADO";
+      }
+
+      var now = (new Date).getTime();
+      if (lastSend > now - 20) return;
+      lastSend = now;
+      Socket.send(dato);
+    }
+
+  </script>
+
+
+</head>
+
+<body style="background-image: url(pos2.jpg) ">
+
+  <div class="logo">
+
+    <img src="logo1.png">
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="titulo">
+
+    <p>CONTROL RELEVADOR A TRAVES DE INTERNET</p>
+
+  </div>
+
+  <br>
+  <br>
+
+  <div>
+
+    <label class="switch">
+      <input type="checkbox" onclick="enviarDatos()" id="check">
+      <span class="slider round"></span>
+    </label>
+
+    <div class="texto">
+
+      <span id="foco">APAGADO</span>
+
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <div class="texto">
+
+    <p>NodeMCU ESP8266 WebSocket WebServer</p>
+
+  </div>
+
+  <div class="texto1">
+
+    <p>Adriana Alejandra Flores Flores</p>
+    <p>Luiz Andres Cr&uacute;z Merlin </p>
+    <p>Andrei Alexey </p>
+    <p>Arturo P&eacute;rez Rios P&eacute;rez</p>
+
+  </div>
+
+  <div class="foto">
+
+    <img style="width:320px; height:170px;" src="1.jpg">
+
+  </div>
+
+</body>
+
+</html>

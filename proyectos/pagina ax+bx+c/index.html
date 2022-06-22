@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+ <title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/alertify.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet"  href="css/alertify.core.css">
+
+<link rel="stylesheet"  href="css/alertify.default.css">
+
+
+<script type="text/javascript">
+ 
+ $(document).ready(function(){
+$("#simple_alert").click (function() {
+ alertify.alert("esta es mi pagina de alerta");
+});
+
+ });
+</script>
+</head>
+<body> 
+
+ 
+  <title>Ecuaciones de 2° Grado</title>
+
+</head>
+
+<script language =javascript>
+var d = new Date();
+              var time = d.getHours();
+
+              if (time > 1 && time < 12){
+                  alertify.alert ("BUENOS DIAS ");
+                  
+              } else if (time >= 12 && time <= 19) {
+                 alertify.alert("BUENAS TARDES ");
+              } else {
+                  alertify.alert("BUENAS NOCHES");
+              }
+
+    alertify.alert ("ESTA LISTO PARA CONTINUAR", function(e){
+if (e) {
+	var  nombre=alertify.prompt("PROPORCIONAME TU NOMBRE",function(e,srt){
+		if (e) {
+			alertify.alert ("HOLA BIENVENIDO AL SIMULADOR DE ECUACIONES CUADRATICAS: " +srt) ;
+
+	}
+	});
+}
+
+    });
+    
+    
+<!--
+
+ function ResolverEc()
+
+ {
+  
+  var Ea= parseInt(document.forms[0].Ea.value);
+
+  var Eb= parseInt(document.forms[0].Eb.value);
+
+  var Ec= parseInt(document.forms[0].Ec.value);
+
+  var E1= new Ec2gdo(Ea,Eb,Ec);
+
+  E1.Resolver(E1);
+
+  delete E1;
+
+  document.close();
+
+ }
+
+ function Ec2gdo(A,B,C)
+
+ {
+
+  this.a=A;
+
+  this.b=B;
+
+  this.c=C;
+
+  this.est=0;
+
+  this.x1=new Complejo();
+
+  this.x2=new Complejo();
+
+  this.Resolver=ResolverEc2gdo;
+
+  this.ResolverReal=Real;
+
+  this.ResolverImaginario=Imaginario;
+
+  this.AsString=AsString;
+
+ }
+
+ function ResolverEc2gdo()
+
+ {
+
+  var d=(this.b*this.b)-(4*this.a*this.c);
+
+  if(d>=0)
+
+  {
+
+   this.ResolverReal(d);
+
+   //this.AsString();
+
+  }
+
+  else
+
+  {
+
+   this.ResolverImaginario(d);
+
+  }
+
+ }
+
+ function Real(D)
+
+ {
+
+  var d=D;
+
+  var r=Math.sqrt(d);
+
+  this.x1.R=((this.b*-1)+r)/(2*this.a);
+
+  this.x2.R=((this.b*-1)-r)/(2*this.a);
+
+  this.est=0;
+
+  this.AsString();
+
+ }
+
+ function Imaginario(D)
+
+ {
+
+  var d=D;
+
+  d*=-1;
+
+  this.x1.R=(this.b*-1)/(2*this.a);
+
+  this.x1.I=Math.sqrt(d)/(2*this.a);
+
+  this.x2.R=this.x1.R;
+
+  this.x2.I=this.x1.I;
+
+  this.est=1;
+
+  this.AsString();
+
+ }
+
+ function  AsString(res)
+
+ {
+
+  //var estado=est;
+
+  if(this.est==0)
+
+  {
+
+   alert('x1= '+this.x1.R+'\n'+'x2= '+this.x2.R);
+
+  }
+
+  else
+
+  {
+
+   alert('x1= '+ this.x1.R+' + '+this.x1.I+' i'+'\n'+'x2= '+this.x2.R+' - '+this.x2.I+' i')
+
+  }
+
+  delete x1;
+
+  delete x2;
+
+ }
+
+
+ function Complejo(R,I)
+
+ {
+
+  this.R=(R || 0);
+
+  this.I=(I || 0);
+
+  //this.Sumar=SumarComplejo;
+
+  //this.Restar=RestarComplejo;
+
+  //this.Multiplicar=MultiplicarComplejo;
+
+  //this.Dividir=DividirComplejo;
+
+ }
+
+ 
+
+-->
+
+</script>
+
+<div><h1 text_aling="center">INSTRUCCIONES:
+
+EN CASO DE QUE EL VALOR
+SEA NEGATIVO ASIGNARLE EL SIGNO(-),EN CASO DE QUE SU VALOR SEA X ASIGNAR UN 1. (X=1).</h1>
+<p>ALUMNO:LUIS ANDRES CRUZ MERLIN</p>
+</div>
+
+<div>Resolución de ax2+bx+c=0
+
+La ecuación de segundo grado completa es una igualdad algebraica que se puede expresar de la forma ax2+bx+c=0, siendo a, b y c números reales y a #0
+
+Para obtener las soluciones utilizamos la fórmula:
+x=-b+-√b^2-4ac/2a
+
+</div>
+<br>
+<br>
+
+
+<body background="20170829_254626_950.jpg" link="#0000FF" vlink="#FF00FF">
+
+ <center><form><font color="black"><b>
+
+  Ecuacion  <input type="text" name="Ea" size="2">  x<sup>2</sup> 
+
+  + <input type="text" name="Eb" size="2">  x  
+
+  + <input type="text" name="Ec" size="2"> =  0</b></font>
+
+  <br><br><input type="button" value="Resolver" onClick="ResolverEc()"><br><br>
+
+  <input type="reset"><br><br><br><br><br></form>
+
+  <marquee  bgcolor="#000000" direction="left" width="300">
+  
+  <font color="#258D7D" face="Berlin Sans FB"><b>BIENVENIDO AL SIMULADOR DE ECUACIONES CUADRATICAS</b></font>
+
+  </marquee></center><br><br><br>
+</div>
+</body>
+</html>﻿

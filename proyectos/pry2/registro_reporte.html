@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formulario De Reportes</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+		<div class="form">
+			<form action="guardar.php" method="POST">
+				
+                                <p>Nombre</p>
+				<label for="nombre">Nombre</label>
+				<br>
+				<input type="text" name="nombre_cl" placeholder="Nombre" required>
+				
+                                <p>Apellido</p>
+				<label for="apellido">Apellido</label>
+				<br>
+				<input type="text" name="apellido_cl" placeholder="Apellido" required>
+                                
+				<p>Matricula de (auto,camion)</p>
+				<label for="matricula">Matricula</label>
+				<br>
+				<input type="text" name="matricula_at" placeholder="Matricula" required>
+
+                                 <p>Modelo de (auto,camion)</p>
+				<label for="modelo">Modelo</label>
+				<br>
+				<input type="text" name="modelo_at" placeholder="Modelo" required>
+
+                                <p>Color de (auto,camion)</p>
+				<label for="color">Color</label>
+				<br>
+				<input type="text" name="color_at" placeholder="Color" required>
+
+				<p>Mensaje</p>
+				<label for="mensaje">Su Mensaje</label>
+				<br>
+				<textarea name="mensaje" placeholder="Mensaje" required></textarea>
+				<br>
+                                 
+                                <p>Servicio</p>
+				<label for="servicio">Servicio</label>
+                                <SELECT NAME="selServicio"> 
+                                <OPTION VALUE="Mantenimiento">Mantenimiento</OPTION>
+                                <OPTION VALUE="Instalacion">Instalacion</OPTION>
+                                </SELECT> 
+
+
+                                 <p>Tipo de registro</p>
+				<label for="tservicio">Tipo de registro</label>
+                                <SELECT NAME="tipServicio"> 
+                                <OPTION VALUE="online">Online</OPTION>
+                                <OPTION VALUE="asesor">Asesor</OPTION>
+                                </SELECT> 
+
+
+				<br><br><br><br>
+				<input type="submit" value="Enviar">
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,239 @@
+﻿ <!DOCTYPE html>
+<h2 class="text-center">SIMULADOR DE DISPAREJO</h2><br>
+<html>
+
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <script src="js/sweetalert.min.js"></script>
+    <link href="css/sweetalert.css" rel="stylesheet" type="text/css"/>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script>
+
+var x1 = prompt("Ingresa tu nombre jugador1:", "");
+
+var x2 = prompt("Ingresa tu nombre juagador2:", "");
+var x3 = prompt("Ingresa tu nombre jagador3:", "");
+
+    //EVENTOS EN javascript
+
+function hacer_click(){
+  let counter = 0;
+    var j1;
+    j1 = Math.round (Math.random()*1);
+    if(j1==0){
+    alert("jUGADOR 1= pulgar arriba 👍 " );
+   
+  }else{
+    alert("jUGADOR 1= pulgar abajo 👎" );
+    
+  }
+   
+    var j2;
+    j2 = Math.round (Math.random()*1);
+    if(j2==0){
+    alert("jUGADOR 2= pulgar arriba 👍 " );
+   
+  }else{
+    alert("jUGADOR 2= pulgar abajo 👎" );
+    
+  }
+   
+    
+    var j3;
+    j3 = Math.round (Math.random()*1);
+    if(j3==0){
+    alert("jUGADOR 3= pulgar arriba 👍 " );
+   
+  }else{
+    alert("jUGADOR 3= pulgar abajo 👎" );
+    
+  }
+   
+    
+  
+if (j1==1 && j2==0 && j3==0 ||  j1==0 && j2==1 && j3==1)  {
+  
+    alert("el ganador es j1 " +x1);
+    
+    if (j1==1){
+ swal({
+  title: "tu eres el ganador",
+  text: "jugador1",
+  imageUrl: '100_6627.jpg'
+});
+}
+
+if (j1==0){
+ swal({
+  title: "tu eres el ganador",
+  text: "jugador1",
+  imageUrl: '100_6628.jpg'
+});
+}
+    }
+    
+     if (j1==0 && j2==1 && j3==0 || j1==1 && j2==0 && j3==1) {
+    
+    alert("el ganador es j2 "+x2);
+    
+   if (j2==1){
+   swal({
+  title: "tu eres el ganador",
+  text: "jugador2",
+  imageUrl: '100_6630.jpg'
+});
+}
+
+if (j2==0){
+ swal({
+  title: "tu eres el ganador",
+  text: "jugador2",
+  imageUrl: '100_6631.jpg'
+});
+}
+
+    }
+    if (j1==0 && j2==0 && j3==1 || j1==1 && j2==1 && j3==0) {
+    alert("el ganador es j3 "+x3);
+    
+   if (j3==1){
+   swal({
+  title: "tu eres el ganador",
+  text: "jugador3",
+  imageUrl: '100_6632.jpg'
+});
+}
+
+if (j3==0){
+ swal({
+  title: "tu eres el ganador",
+  text: "jugador3",
+  imageUrl: '100_6633.jpg'
+});
+}
+    }
+    
+    if (j1==0 && j2==0 && j3==0 || j1==1 && j2==1 && j3==1) {
+    alert("nadie gana repit ");
+     
+    }
+
+   
+}
+
+   
+
+  </script>
+
+<script type="text/javascript">
+function carga(){
+var aleatorio =x1;
+  
+document.getElementById("aleatorio").value=""+aleatorio+"";
+
+
+}
+</script>
+<script type="text/javascript">
+function carga2(){
+var aleatorio2 =x2;
+  
+document.getElementById("aleatorio2").value=""+aleatorio2+"";
+
+
+}
+</script>
+</script>
+<script type="text/javascript">
+function carga3(){
+var aleatorio3 =x3;
+  
+document.getElementById("aleatorio3").value=""+aleatorio3+"";
+
+
+}
+</script>
+ 
+<div class="d-grid gap-2 col-6 mx-auto">
+            <input  class="btn btn-primary" type="button" value="jugar"   onclick="hacer_click(); carga(); carga2(); carga3() "/>
+ 
+<input  type="button" class="btn btn-success" value="jugar otra partida"   onclick="hacer_click(); carga(); carga2(); carga3()" />
+
+
+</div>
+
+
+
+
+
+
+
+
+<br>
+<br><br>
+<div align=center>
+<IMG SRC="Football_2-32_icon-icons.com_72064.png  " WIDTH=178 HEIGHT=180 align=left>
+ <tr> 
+<td>J1</td>
+<td><label for="aleatorio"></label>
+<input type="text" name="aleatorio" id="aleatorio"/></td>
+</tr>
+<IMG SRC="Football_2-34_icon-icons.com_72069.png  " WIDTH=178 HEIGHT=180 align=center>
+<tr> 
+<td>J2</td>
+<td><label for="aleatorio2"></label>
+<input type="text" name="aleatorio2" id="aleatorio2"/></td>
+</tr>
+<IMG SRC="descarga.png  " WIDTH=178 HEIGHT=180 align=right ><br>
+<tr> 
+<td>J3</td>
+<td><label for="aleatorio3"></label>
+<input type="text" name="aleatorio3" id="aleatorio3"/></td>
+</tr>
+</div> 
+
+      
+
+       
+
+    </head>
+
+ 
+
+    
+
+       
+
+    <body>
+ <div class="text-center">
+<p style="color:red;">INTRUCCIONES: </p>
+ <p> 1-DAR CLICK EN JUGAR</p>
+ <p style="color:red;"> 2-SE MOSTRARA UN CUADRO INDICANDO ( 1 o 0 ) ACLARACIóN PARTE DE ABAJO.</p>
+ <p> 3-SE MOSTRARA QUIEN ES EL GANADOR ,EL CUAL ES EL QUE QUEDE DISPAREJO.</p>
+
+ <div class="container">
+  <div class="row">
+    <div class="col-sm-4"></div>
+      
+    <div class="col-sm-4"><P aling=lefth >1=</P><IMG SRC="100_6627.JPG  " WIDTH=120 HEIGHT=140 align=LEFT ></div>
+    <div class="col-sm-4"><P aling=CENTER >0=</P><IMG SRC="100_6631.JPG  " WIDTH=120 HEIGHT=140 align=CENTER ></div>
+
+      <div class="col-sm-4"></div>
+  </div>
+
+
+ </div>
+</body>
+
+<script>
+
+     swal({
+  title: "bienvenidos",
+  text: "al simulador de disparejo",
+  imageUrl: 'imagenes/imagen1.jpg'
+});
+
+    </script>
+</html>

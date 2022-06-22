@@ -1,0 +1,139 @@
+﻿<html>
+<head>
+<title>SIMULADOR TRIANGULO RECTANGULO</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/alertify.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet"  href="css/alertify.core.css">
+
+<link rel="stylesheet"  href="css/alertify.default.css">
+<br>
+
+<a href="https://wichilin12.wixsite.com/simulacionlacm/simuladores"><button>Regresar</button></a> 
+
+<Script language=JavaScript>
+
+
+                            
+ function process(){
+a=document.formp.a.value;
+b=document.formp.b.value;
+c=document.formp.c.value;
+d=document.formp.worksp.value;
+n="\n";
+p=" + ";
+m=" - ";
+s="^2";
+// alt 253
+e=" = ";
+    if(a=="a"){
+        answer=Math.sqrt((c*c)-(b*b))
+        document.formp.a.value=answer;
+        document.formp.worksp.value=d+n+a+s+p+b+s+e+c+s+n;
+        document.formp.worksp.value+=a+s+p+b+s+m+b+s+e+c+s+m+b+s+n;
+        document.formp.worksp.value+=a+s+e+(c*c)+m+(b*b)+n;
+        document.formp.worksp.value+=a+s+e+((c*c)-(b*b))+n;
+        document.formp.worksp.value+=a+e+answer;
+    }
+    if(b=="b"){
+        answer=Math.sqrt((c*c)-(a*a))
+        document.formp.b.value=answer;
+        document.formp.worksp.value=d+n+a+s+p+b+s+e+c+s+n;
+        document.formp.worksp.value+=a+s+p+b+s+m+a+s+e+c+s+m+a+s+n;
+        document.formp.worksp.value+=b+s+e+(c*c)+m+(a*a)+n;
+        document.formp.worksp.value+=b+s+e+((c*c)-(a*a))+n;
+        document.formp.worksp.value+=b+e+answer;
+    }
+    if(c=="c"){
+        answer=Math.sqrt((a*a)+(b*b))
+        document.formp.c.value=answer;
+        document.formp.worksp.value=d+n+a+s+p+b+s+e+c+s+n;
+        document.formp.worksp.value+=(a*a)+p+(b*b)+e+c+s+n;
+        document.formp.worksp.value+=answer+e+c;
+    }
+}
+ 
+// end the hide -->
+</script>
+</head>                            
+
+
+ 
+<body bgcolor ="#ffffff" text="#000000" link="#ff0000" vlink="#ff8000" alink="#0000ff" >
+<span id="liveclock" style="position:absolute;left:0;top:0;"></span><script language="JavaScript" type="text/javascript">
+ <!--
+
+ var d = new Date();
+
+              var time = d.getHours();
+
+              if (time > 1 && time < 12){
+                  alertify.alert ("BUENOS DIAS ");
+                  
+              } else if (time >= 12 && time <= 19) {
+                 alertify.alert("BUENAS TARDES ");
+              } else {
+                  alertify.alert("BUENAS NOCHES");
+              }
+
+
+ alertify.alert ("OK PARA CONTINUAR", function(e){
+if (e) {
+	var  nombre=alertify.prompt("INTRODUCE TU NOMBRE",function(e,srt){
+		if (e) {
+			alertify.alert ("BIENVENIDO AL SIMULADOR TRIANGULO RECTANGULO: "+srt) ;
+
+	}
+	});
+}
+
+    });
+
+                        
+ </script>
+
+
+<center> 
+<p>
+<h3>INSTRUCCIONES:INTRODUCIR LOS DATOS CORRESPONDIENTES EN 2 DE SU CASILLAS BORRANDO LA LETRA ESTABLECIDA POR DEFAULT,NOTESE QUE LA CASILLA QUE 
+QUEDA ES LA QUE SE CALCULARA.</h3>
+<br>
+
+<img src="mate.png" width="120" height="105" align="left">
+
+<br>
+<Form name=formp>
+<table cellspacing=1 cellpadding=1 border=0 >
+
+<tr>
+    <td valign=middle><div align="right"><input size=5 name=b value="b">
+</div></td><br>
+    <td ><div align="center"><img src="articles-24310_recurso.jpg" width="120" height="105" alt="Right Triangle" ></div></td>
+    <td valign=middle><input size=5 name=c value="c"></td>
+</tr><br>
+<tr>
+    <td></td>
+    <td><center><input size=5 name=a value="a"></center></td>
+    <td></td>
+</tr><br>
+<tr >
+    <td  colspan="3"><br><br>
+    <left><input type=button value=RESOLVER: onclick=process()>&nbsp;<font size="-1"><b></b></font></left></td>
+</tr><br><tr >
+   <textarea   name="worksp"  cols="40" rows="6" value="" style="margin: 0px; height: 130px; width: 560px;">PROCEDIMIENTO: </textarea>
+<tr><td  colspan="3"><br><left><input type=reset value=RESTABLECER></left></td>
+</tr><br><br><br><br>
+<tr  >
+    <td colspan=3 bgcolor=#fffff><center><br><br><font size="+1"><marquee>SIMULADOR DE TRIANGULO RECTANGULO</marquee></font></center>
+<br><center><font size="+2">a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup></font></center>
+</tr>
+</table></left>
+
+<div style="text-align:center;padding:1em 0;"> <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/city/3514783"><span style="color:gray;">Hora actual en</span><br />Veracruz, México</a></h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=medium&timezone=America%2FMexico_City" width="100%" height="115" frameborder="0" seamless></iframe> </div>
+</body>
+ 
+</html>
