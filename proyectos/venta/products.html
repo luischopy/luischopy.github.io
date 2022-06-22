@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Bootstrap HTML5">
+        <meta name="keywords" content="HTML5, CSS3, JavaScript">
+	<title>Productos</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+	<script src="js/materialize.min.js" ></script>
+	<script src="js/main.js" ></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+	<form id="LoginModal" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h5 class="center-align">Login</h5>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-account-circle prefix"></i>
+					<input id="name" type="text" class="validate">
+					<label for="name">Name</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-lock prefix"></i>
+					<input id="password" type="password" class="validate">
+					<label for="password">Password</label>
+				</div>
+				<div class="col s12">
+					<p>User type</p>
+					<p>
+				      	<input name="group1" type="radio" id="test1" />
+				      	<label for="test1">Admin</label>
+				    </p>
+				    <p>
+				      	<input name="group1" type="radio" id="test2" />
+				      	<label for="test2">User</label>
+				    </p>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="waves-effect btn-flat tooltipped" data-position="top" data-tooltip="Send"><i class="zmdi zmdi-mail-send"></i></a>
+			<a href="#!" class="modal-action modal-close waves-effect btn-flat tooltipped" data-position="top" data-tooltip="Cancel"><i class="zmdi zmdi-close"></i></a>
+		</div>
+	</form>
+	<form id="RegModal" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h5 class="center-align">Registration</h5>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-account prefix"></i>
+					<input id="name" type="text" class="validate">
+					<label for="name">Name</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-account prefix"></i>
+					<input id="lastname" type="text" class="validate">
+					<label for="lastname">Last Name</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-face prefix"></i>
+					<input id="username" type="text" class="validate">
+					<label for="username">User Name</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-lock prefix"></i>
+					<input id="password" type="password" class="validate">
+					<label for="password">Password</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-account-box prefix"></i>
+					<input id="DNI" type="text" class="validate">
+					<label for="DNI">DNI</label>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="waves-effect btn-flat tooltipped" data-position="top" data-tooltip="Send"><i class="zmdi zmdi-mail-send"></i></a>
+			<a href="#!" class="modal-action modal-close waves-effect btn-flat tooltipped" data-position="top" data-tooltip="Cancel"><i class="zmdi zmdi-close"></i></a>
+		</div>
+	</form>
+	<nav class="NavBar full">
+		<div class="row">
+			<div class="tittles NavBar-logo col s12 m3">electronics merlin</div>
+			<ul class="NavBar-links col m9">
+				<li><a href="index.html" class="waves-effect">Inicio</a></li>
+				<li><a href="products.html" class="waves-effect">Productos</a></li>
+				<li><a href="#RegModal" class="waves-effect modal-trigger"></a></li>
+				<li><a href="#!" class="waves-effect btn-shopcart"></a></li>
+				<li><a href="#LoginModal" class="waves-effect modal-trigger"></a></li>	
+			</ul>
+			<i class="zmdi zmdi-more-vert full btn-menu hide-on-med-and-up waves-effect"></i>
+		</div>
+	</nav>
+	<div class="full ShoppingCart valign-wrapper">
+		<div class="container valign">
+			<div class="row valign-wrapper">
+				<div class="col s12 m6 valign">
+					<p class="center-align" style="color: #2F9FF3;">
+						<i class="zmdi zmdi-shopping-cart zmdi-hc-5x"></i>		
+					</p>
+					<p class="center-align">
+						<a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-tooltip="Empty cart" style="margin-right: 17px;"><i class="zmdi zmdi-delete"></i></a>
+						<a class="btn-floating waves-effect waves-light green tooltipped" data-position="bottom" data-tooltip="Confirm purchase"><i class="zmdi zmdi-money"></i></a>
+					</p>
+				</div>
+				<div class="col s12 m6 valign">
+					<table class="centered highlight responsive-table">
+				        <thead>
+				          	<tr>
+								<th>Product</th>
+								<th>Price</th>
+				          	</tr>
+				        </thead>
+				        <tbody>
+					        <tr>
+					            <td>Product #1</td>
+					            <td>$7</td>
+					        </tr>
+					        <tr>
+					            <td>Product #2</td>
+					            <td>$7</td>
+					        </tr>
+					        <tr>
+					            <td>Product #3</td>
+					            <td>$7</td>
+					        </tr>
+				        	<tr>
+				        		<td>Total</td>
+				        		<td>$21</td>
+				        	</tr>
+				        </tbody>
+      				</table>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<h4 class="center-align tittles">Products</h4>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="assets/img/header.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">TV samsung smart 55``<i class="zmdi zmdi-more-vert right"></i></span>
+							<p style="color:red ">$10,450.00</p>
+							<br>
+							<!--<p><a href="#">This is a link</a></p>-->
+							<a href="#" class="btn btn-default producto" precio="10450" titulo="tvsamsung" role="button">Comprar</a></p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Caracteristicas<i class="zmdi zmdi-close right"></i></span>
+							<p>Resolución 19201080<br>
+60 Hz<br>
+Potencia 10w<br>
+WebOS 3.5<br>
+Entrada HDMI: 2 / Entrada USB: 1<br>
+
+Peso del producto	11 Kg<br>
+Peso del envío	10.5 Kg<br>
+Número de modelo del producto 43LJ5500<br></p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="assets/img/pro2.jpg">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">PS4<i class="zmdi zmdi-more-vert right"></i></span>
+							<p style="color:red ">$7,239.00</p>
+							<br>
+							<!--<p><a href="#">This is a link</a></p>-->
+							<a href="#" class="btn btn-default producto" precio="7239" titulo="ps4" role="button">Comprar</a></p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Caracteristicas<i class="zmdi zmdi-close right"></i></span>
+							<p>Disco duro:	1 TB<br>
+Tipo de consola:	PS4<br>
+Atributos del control:	inalámbrico<br>
+Fabricante:	Sony<br>
+Otras características:	incluye videojuego físico FIFA 19<br>
+Color:	negro<br>
+Modelo #:	PS4 1TB FIFA 19<br>
+Marca:	PLAYSTATION<br>
+Dimensiones	275 x 53 x 305 mm</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="assets/img/pro3.jpg">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Camara Nikon<i class="zmdi zmdi-more-vert right"></i></span>
+							<p style="color:red ">$13,450.00</p>
+							<br>
+							<!--<p><a href="#">This is a link</a></p>-->
+							<a href="#" class="btn btn-default producto" precio="13450" titulo="Camara" role="button">Comprar</a></p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Caracteristicas<i class="zmdi zmdi-close right"></i></span>
+							<p>Dimensiones del producto: 7.5 x 12.4 x 9.8 cm ; 395 g
+Peso del envío: 1.1 Kg<br>
+Pilas 1 Lithium ion necesaria(s), incluida(s)<br>
+Número de modelo del producto: 1571<br>
+ASIN: B01KITZKDE<br>
+El kit incluye la cámara réflex digital D3400 y el lente AF-P DX NIKKOR 18-55mm f/3.5-5.6G VR ultracompacto
+Tome fotos detalladas y definidas, y grabe videos en Full HD El lente cuenta con Reducción de la Vibración (VR) para poder obtener las fotos a pulso y los videos más nítidos
+Conectividad fácil con SnapBridge de Nikon y una tableta o un teléfono inteligente compatible
+El lente AF-P Nikkor 18-55mm f/3.5-5.6G VR es compacto y liviano ideal para casi cualquier situación de disparo
+Alcance de zoom versátil de 18-55mm, ideal para disparos en gran angular, retratos, movimientos rápidos, videos HD y mucho más</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="assets/img/pro4.jpg">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Drone Sonyc<i class="zmdi zmdi-more-vert right"></i></span>
+							<p style="color:red ">$5,900.00</p>
+							<br>
+							<!--<button><a href="#">Comprar</a></button>-->
+							<a href="#" class="btn btn-default producto" precio="5900" titulo="Drone" role="button">Comprar</a></p>
+							
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Caracteristicas<i class="zmdi zmdi-close right"></i></span>
+							<p>Dimensiones del producto: 24.9 x 7.6 x 20.8 cm ; 676 g<br>
+Peso del envío: 662 g<br>
+Pilas 1 Lithium Metal necesaria(s), incluida(s)<br>
+Número de modelo del producto: CP.PT.000731<br>
+Rápido despegue; con FaceAware, Spark se eleva desde tu mano al reconocer tu cara; despega y se mantiene en vuelo estacionario pocos segundos después de haberse encendido<br>
+Control gestual; haz fotos aéreas asombrosas con gestos de tu mano, sin control remoto o dispositivo móvil<br>
+Crea con facilidad, sus modos de vuelo Inteligente y su intuitivo control te ayudarán a crear vídeos aéreos de cine en sólo unos toques
+Edita y comparte, la aplicación DJI GO 4 incluye plantillas de edición automáticas y una amplia gama de filtros; edita con rapidez tus vídeos y compártelos directamente en las redes sociales<br>
+Potente propulsión de hasta 50 Kph, Transmisión Wi-Fi de Vídeo HD de hasta 2 Km, Tiempo máx; de vuelo de hasta 16 minutos</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="assets/img/pro5.jpg">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Audifonos Arteck<i class="zmdi zmdi-more-vert right"></i></span>
+							<p style="color:red ">$2,499.00</p>
+							<br>
+							<!--<button><a href="#">Comprar</a></button>-->
+							<a href="#" class="btn btn-default producto" precio="2499" titulo="Audifonos" role="button">Comprar</a></p>
+							
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Caracteristicas<i class="zmdi zmdi-close right"></i></span>
+							<p>
+Tecnología de conectividad	Inalámbrico<br>
+Color del producto	Negro, Rojo<br>
+Control de energía<br>
+Recargable	Si<br>
+Alcance inalámbrico	10 m<br>
+Versión de Bluetooth	2.1+EDR<br>
+Frecuencia de auricular	20 - 20000 Hz<br>
+Sistema acústico	Cerrado<br>
+Unidad de disco	4 cm<br>
+Audifonos	Circumaural<br>
+Estilo de uso	Diadema.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="assets/img/pro6.jpg">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Bocina Axess<i class="zmdi zmdi-more-vert right"></i></span>
+                            <p style="color:red ">$1,500.00</p>
+                            <br>
+							<!--<button><a href="#">Comprar</a></button>-->
+							<a href="#" class="btn btn-default producto" precio="1500" titulo="bocina Bluetooth"role="button">Comprar</a>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Caracteristicas<i class="zmdi zmdi-close right"></i></span>
+							<p>Reproduce:	tarjeta sd, usb, mp3, radio FM<br>
+Batería:	recargable<br>
+Entradas:	auxiliar<br>
+Cuenta con:	Bluetooth<br>
+Color:	negro<br>
+Potencia real (RMS):10 w<br>
+Modelo #:	SPBT1041 BK<br>
+Marca:	AXESS<br>
+Incluye:cable auxiliar, cable de corriente, correa</p>
+						
+
+
+
+						</div>
+                        </div>
+				</div>
+			</div>
+		</div>
+		
+
+
+
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m6">
+					<h5>Electronics Merlin</h5>
+					<p>
+						Somos una empresa de venta online,garantizando a nuestros clientes la mejor satisfacci&oacute;n del mercado.
+					</p>
+				</div>
+				<div class="col s12 m6">
+					<h5 class="center-align">Redes Sociales</h5>
+					<ul class="center-align">
+						<li><a href="https://www.facebook.com/luicachondo?ref=bookmarks"><i class="zmdi zmdi-facebook"></i> &nbsp; Facebook</a></li>
+						<li><a href="https://twitter.com/andresss12"><i class="zmdi zmdi-twitter"></i> &nbsp; Twitter</a></li>
+						<!--<li><a href="#!"><i class="zmdi zmdi-google-plus"></i> &nbsp; Google+</a></li>
+						<li><a href="#!"><i class="zmdi zmdi-instagram"></i> &nbsp; Instagram</a></li>-->
+					</ul>	
+				</div>
+				<div class="col s12 tittles footer-copyright">electronics &copy; 2018</div>
+			</div>
+		</div>
+
+
+
+
+	</footer>
+<div class="modal-footer">
+	<script src="minicart.js" ></script>
+	<script >
+	  // configuración inicial del carrito 
+	  paypal.minicart.render({
+	  strings:{
+	    button:'Pagar'
+	   ,buttonAlt: "Total"
+	   ,subtotal: 'Total:'
+	   ,empty: 'No hay productos en el carrito'
+	  }
+	  });
+	  // Eventos para agregar productos al carrito
+	  
+	   $('.producto').click(function(e){
+	       e.stopPropagation();
+		    paypal.minicart.cart.add({
+			business: 'wichilin12@live.com.mx', // Cuenta paypal para recibir el dinero
+			item_name: $(this).attr("titulo"),
+			 amount: $(this).attr("precio"),
+			 currency_code: 'MXN',
+			
+			});
+	   });
+	  
+	</script>
+</div>
+
+</body>
+
+</html>
